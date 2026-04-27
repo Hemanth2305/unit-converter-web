@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SmartConvert 1.0</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+    <div class="app-container">
+
+        <!-- Sidebar -->
+        <nav class="sidebar">
+            <h2 class="logo">SmartConvert</h2>
+
+            <div class="nav-section">
+                <button class="nav-btn active" data-category="temperature">🌡 Temperature</button>
+                <button class="nav-btn" data-category="weight">⚖ Weight</button>
+                <button class="nav-btn" data-category="distance">🗺 Distance</button>
+            </div>
+        </nav>
+
+        <!-- Main Content -->
+        <main class="converter-card">
+
+            <header class="converter-header">
+                <h1 id="category-title">Temperature</h1>
+                <p class="subtitle">Convert units instantly</p>
+            </header>
+
+            <section class="converter-body">
+
+                <div class="input-group">
+                    <input type="number" id="input-value" placeholder="Enter value" value="0">
+                    <select id="unit-from"></select>
+                </div>
+
+                <div class="swap-icon" title="Swap units">⇅</div>
+
+                <div class="input-group">
+                    <input type="text" id="output-value" readonly placeholder="Result">
+                    <select id="unit-to"></select>
+                </div>
+
+            </section>
+
+        </main>
+    </div>
+
+    <script src="/static/script.js"></script>
+</body>
+
+</html>

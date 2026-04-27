@@ -1,0 +1,99 @@
+:root {
+    --bg-color: #121212;
+    --card-bg: #1e1e1e;
+    --accent: #4ade80;
+    --text: #e0e0e0;
+}
+
+body {
+    background: var(--bg-color);
+    color: var(--text);
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+    height: 100vh;
+}
+
+.app-container {
+    display: flex;
+    width: 100vw;
+    height: 100vh;
+    background: var(--card-bg);
+    overflow: hidden;
+}
+
+.sidebar {
+    width: 260px;
+    min-width: 220px;
+    background: #181818;
+    padding: 20px;
+    border-right: 1px solid #333;
+}
+
+/* Keep buttons same */
+.nav-btn {
+    width: 100%;
+    background: none;
+    border: none;
+    color: #888;
+    padding: 15px;
+    text-align: left;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 8px;
+    margin-bottom: 5px;
+}
+
+.nav-btn.active {
+    background: rgba(74, 222, 128, 0.1);
+    color: var(--accent);
+}
+
+/* 🔧 FIX 4: Center content INSIDE full layout */
+.converter-card {
+    flex: 1;
+    padding: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    max-width: 900px;
+    margin: auto;
+    /* 👈 key for centered content */
+}
+
+/* Keep input layout */
+.input-group {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+input,
+select {
+    background: #2a2a2a;
+    border: 1px solid #444;
+    color: white;
+    padding: 15px;
+    border-radius: 8px;
+    font-size: 18px;
+}
+
+input {
+    flex-grow: 1;
+}
+
+.swap-icon {
+    font-size: 24px;
+    margin: 10px 0;
+    text-align: center;
+    color: var(--accent);
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.swap-icon:hover {
+    transform: rotate(180deg);
+}
+
+.app-container {
+    background: linear-gradient(145deg, #1a1a1a, #111);
+}
